@@ -1,4 +1,4 @@
-# lite
+# React app
 
 > A React project
 
