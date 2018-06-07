@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import LayOut from '../../common/components/Layout';
 import logo from '../assets/img/logo.svg';
 import '../assets/css/App.css';
 
@@ -7,7 +8,7 @@ class App extends Component {
 	render() {
 		const info = this.props.info.get('agreementId');
 		return (
-			<div className="App">
+			<LayOut title="child">
 				<header className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<h1 className="App-title">Welcome to child</h1>
@@ -18,7 +19,7 @@ class App extends Component {
 				<div>
 					{info}
 				</div>
-			</div>
+			</LayOut>
 		);
 	}
 }

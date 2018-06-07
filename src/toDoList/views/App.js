@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { push} from 'react-router-redux';
+import LayOut from '../../common/components/Layout';
 import { ServiceActions } from '../redux/test';
 import logo from '../assets/img/logo.svg';
 import '../assets/css/App.css'
@@ -17,7 +18,7 @@ class Home extends Component {
 		console.log(this);
 		const info = this.props.info.get('agreementId');
 		return (
-			<div className="App">
+			<LayOut title="app" className="App">
 				<header className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<h1 className="App-title">Welcome to React</h1>
@@ -33,7 +34,7 @@ class Home extends Component {
 				</div>
 				<Link to="/child">Child</Link>
 				<p onClick={this.jumpChild.bind(this)}>redux child</p>
-			</div>
+			</LayOut>
 		);
 	}
 }
@@ -41,3 +42,4 @@ const mapStateToProps = (state) => ({
 	info: state.get('service')
 });
 export default connect(mapStateToProps, undefined, undefined, {pure:false})(Home);
+

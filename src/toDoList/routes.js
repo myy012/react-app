@@ -1,6 +1,7 @@
 import Home from './views/App';
 import Child from './views/Child';
 import Wrong from './views/Wrong';
+import Bridge from './views/Bridge';
 
 const routes = [
     {
