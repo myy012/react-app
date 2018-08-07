@@ -1,15 +1,13 @@
-const host = 'http://192.168.10.214';
+import config from 'common/config';
 
-const APIs = {
-    servicepack: '/load/scrvice/info/'
+
+const apis = {
+    servicepack: '/load/scrvice/info/',
+    syncPath: '/sync/path'
 };
 
-let addApi = api => {
-    Object.keys(api).forEach(key => {
-        APIs[key] = `${host}${APIs[key]}`;
-    });
-};
+config.addApis(apis);
 
-addApi(APIs);
+// config.setHost('http://192.168.10.214');
 
-export default APIs;
+export default config;

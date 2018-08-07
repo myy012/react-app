@@ -4,7 +4,7 @@
 import { combineReducers } from 'redux-immutable';
 import Immutable from 'immutable';
 import { routerReducer } from 'react-router-redux';
-import configureStore from '../../common/utils/CreateStore';
+import configureStore from 'common/utils/CreateStore';
 import rootSaga from '../sagas';
 import { serviceReducers } from './test';
 

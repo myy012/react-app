@@ -8,16 +8,18 @@ class App extends Component {
 	render() {
 		const info = this.props.info.get('agreementId');
 		return (
-			<LayOut title="child">
-				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
-					<h1 className="App-title">欢迎来到子页面</h1>
-				</header>
-				<p className="App-intro">
-					开始编辑代码吧<code>src/Child.js</code>编辑之后，重新刷新.
-				</p>
+            <LayOut title="child">
 				<div>
-					{info}
+					<header className="App-header">
+						<img src={logo} className="App-logo" alt="logo" />
+						<h1 className="App-title">欢迎来到子页面</h1>
+					</header>
+					<p className="App-intro">
+						开始编辑代码吧<code>src/Child.js</code>编辑之后，重新刷新.
+					</p>
+					<div>
+						{info}
+					</div>
 				</div>
 			</LayOut>
 		);

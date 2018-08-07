@@ -2,7 +2,7 @@
  * @desc [登录注销账号相关redux]
  */
 import Immutable from 'immutable';
-import CreateAction from '../../common/utils/CreateAction';
+import CreateAction from 'common/utils/CreateAction';
 
 /* Constants */
 const GETSERVICEINFO = 'GETSERVICEINFO';
@@ -21,7 +21,9 @@ export const ServiceActions = {
 };
 const initialState = Immutable.fromJS({
     id: null,
-    info: {}
+    info: {
+        agreementId: 1
+    }
 });
 
 /* Reducers */

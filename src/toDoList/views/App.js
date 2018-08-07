@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import {
+	HashRouter as Router,
+	Link
+} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { push} from 'react-router-redux';
-import LayOut from '../../common/components/Layout';
-import { ServiceActions } from '../redux/test';
-import logo from '../assets/img/logo.svg';
-import '../assets/css/App.css'
+import LayOut from 'common/components/Layout';
+import { ServiceActions } from 'toDoList/redux/test';
+import logo from 'toDoList/assets/img/logo.svg';
+import temImg from 'toDoList/assets/img/test.jpg'
+import 'toDoList/assets/css/App.css';
+import 'toDolist/assets/css/temLess.less';
+import 'toDolist/assets/css/temStyl.styl';
 
 class Home extends Component {
 	buildARequest() {
@@ -15,12 +21,13 @@ class Home extends Component {
 		this.props.dispatch(push('/child'));
 	}
 	render() {
-		console.log(this);
+		console.log('这枚简单123');
 		const info = this.props.info.get('agreementId');
 		return (
 			<LayOut title="app" className="App">
 				<header className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
+					<img src={require('toDoList/assets/img/test.jpg')} className="big" />
 					<h1 className="App-title">Welcome to React</h1>
 				</header>
 				<p className="App-intro">
@@ -30,7 +37,7 @@ class Home extends Component {
 					build a request
 				</p>
 				<div>
-					{info}
+					{info}这样挺好的
 				</div>
 				<Link to="/child">Child</Link>
 				<p onClick={this.jumpChild.bind(this)}>redux child</p>

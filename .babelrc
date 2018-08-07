@@ -1,0 +1,15 @@
+{
+    "presets": [
+        "react",
+        "env",
+        "stage-0"
+    ],
+    "plugins": [
+        // "syntax-dynamic-import",
+        "react-hot-loader/babel"
+        // ,
+        // ["import-inspector", {
+        //   "serverSideRequirePath": true
+        // }]
+    ]
+}

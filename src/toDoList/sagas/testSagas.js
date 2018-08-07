@@ -1,11 +1,11 @@
 import {put, takeLatest, call} from 'redux-saga/effects';
+import http from 'common/utils/http';
 import {ServiceTypes, ServiceActions} from '../redux/test';
-import API from '../config';
-import http from '../../common/utils/http';
+import config from '../config';
 
 
 const fetch = (params = {}) => {
-    return http.get(API.servicepack, params).catch(() => ({}));
+    return http.get(config.apis.syncPath, params).catch(() => ({}));
 }
 
 function* service(action) {
