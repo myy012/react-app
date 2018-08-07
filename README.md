@@ -12,7 +12,16 @@ yarn
 ## Devlop
 
 ```bash
-yarn run start
+yarn run dev
+
+## mockup ##
+ - Add new files under mockup directory eg: mockup/sync/path.js
+ - Access path eg:/sync/path
+
+## visit website ##
+localhost:3300/
+
+
 ```
 
 
